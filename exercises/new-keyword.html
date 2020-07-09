@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Title</title>
+</head>
+<body>
+ <button class="one">Button 1</button>
+ <button class="two">Button 2</button>
+
+ <script>
+  const buttonOne = document.querySelector('.one');
+  const buttonTwo = document.querySelector('.two');
+
+  function tellMeAboutTheButton() {
+    console.log(this);
+    setTimeout(function() {
+      this.textContent = 'This it the next text of the button'
+    }, 1000);
+  }
+
+  buttonOne.addEventListener('click', tellMeAboutTheButton);
+  buttonTwo.addEventListener('click', tellMeAboutTheButton);
+ </script>
+
+</body>
+</html>
